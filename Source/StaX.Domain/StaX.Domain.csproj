@@ -9,7 +9,7 @@
     <LangVersion>12</LangVersion>
     <Version>1.0.1</Version>
     <ProjectUrl>https://github.com/Psynapsis/StaX.Domain</ProjectUrl>
-    <PackageIcon>Images/icon.png</PackageIcon>
+    <PackageIcon>images/icon.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
@@ -22,9 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Images/icon.png">
+    <None Include="Images/icon.png">
       <Pack>True</Pack>
-      <PackagePath>images\</PackagePath>
+      <PackagePath>images/</PackagePath>
     </None>
   </ItemGroup>
 
