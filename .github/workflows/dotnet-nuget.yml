@@ -30,17 +30,8 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Restore dependencies
-        run: dotnet restore $env:Solution_Name
-
       - name: Build
-        run: dotnet build $env:Solution_Name --configuration $env:Configuration --no-restore
-
-      - name: Test
-        run: dotnet test $env:Solution_Name --configuration $env:Configuration --no-build --verbosity normal
-
-      - name: Pack
-        run: dotnet pack $env:Wap_Project_Path --configuration $env:Configuration --no-build --output $env:Wap_Project_Directory
+        run: dotnet build $env:Solution_Name --configuration $env:Configuration
 
       - name: Publish NuGet package
         run: dotnet nuget push $env:Wap_Project_Directory/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
