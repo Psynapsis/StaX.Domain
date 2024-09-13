@@ -19,7 +19,7 @@ jobs:
     env:
       Solution_Name: Source\StaX.Domain.sln            # Replace with your solution name, i.e. MyWpfApp.sln.
       Wap_Project_Directory: Source\Packages           # Replace with the Wap project directory relative to the solution, i.e. MyWpfApp.Package.
-      Wap_Project_Path: StaX.Domain\StaX.Domain.csproj # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
+      Wap_Project_Path: Source\StaX.Domain\StaX.Domain.csproj # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
 
     steps:
       - name: Checkout code
@@ -34,13 +34,13 @@ jobs:
         run: dotnet restore $env:Solution_Name
 
       - name: Build
-        run: dotnet build $env:Solution_Name --configuration Release --no-restore
+        run: dotnet build $env:Solution_Name --configuration $env:Configuration --no-restore
 
       - name: Test
-        run: dotnet test $env:Solution_Name --configuration Release --no-build --verbosity normal
+        run: dotnet test $env:Solution_Name --configuration $env:Configuration --no-build --verbosity normal
 
       - name: Pack
-        run: dotnet pack $env:Wap_Project_Path --configuration Release --no-build --output $env:Wap_Project_Directory
+        run: dotnet pack $env:Wap_Project_Path --configuration $env:Configuration --no-build --output $env:Wap_Project_Directory
 
       - name: Publish NuGet package
         run: dotnet nuget push $env:Wap_Project_Directory/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
