@@ -7,9 +7,10 @@
     <Nullable>enable</Nullable>
     <PackageOutputPath>../Packages</PackageOutputPath>
     <LangVersion>12</LangVersion>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
+    <Company>Psynapsis</Company>
     <ProjectUrl>https://github.com/Psynapsis/StaX.Domain</ProjectUrl>
-    <PackageIcon>images/icon.png</PackageIcon>
+    <PackageIcon>images/StaX.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
@@ -22,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Images/icon.png">
+    <None Include="Images/StaX.png">
       <Pack>True</Pack>
       <PackagePath>images/</PackagePath>
     </None>
