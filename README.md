@@ -1,7 +1,7 @@
 
 # StaX.Domain
 
-**[`StaX.Domain`](https://www.nuget.org/packages/StaX.Domain)** is a core library built on [Avalonia](https://github.com/AvaloniaUI) and [Fluent Avalonia](https://github.com/amwx/FluentAvalonia), designed for plugin development and integration within the StaX application. It provides essential abstractions and a flexible architecture that allows developers to create custom plugins for the StaX platform.
+**[`StaX.Domain`](https://www.nuget.org/packages/StaX.Domain)** is a core library built on [Avalonia](https://github.com/AvaloniaUI) and [Fluent Avalonia](https://github.com/amwx/FluentAvalonia), designed for plugin development and integration within the [StaX](https://github.com/Psynapsis/StaX) application. It provides essential abstractions and a flexible architecture that allows developers to create custom plugins for the StaX platform.
 
 ## Features
 

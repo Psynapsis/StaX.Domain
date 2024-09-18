@@ -30,4 +30,4 @@ jobs:
         run: dotnet build $env:Solution_Name --configuration Release
 
       - name: Publish NuGet package
-        run: dotnet nuget push $env:Wap_Project_Packages --api-key $env:Nuget_Api_Key --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push $env:Wap_Project_Packages --api-key $env:Nuget_Api_Key --source https://api.nuget.org/v3/index.json --skip-duplicate
